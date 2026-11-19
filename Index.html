@@ -1,0 +1,598 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Lamiya ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --pink: #ff5c8a;
+  --deep: #a51d50;
+  --cream: #fff5f7;
+  --text: #57243a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+button { font-family: inherit; }
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 35px 20px;
+  color: white;
+  background:
+    linear-gradient(135deg, rgba(83,10,44,.88), rgba(226,56,112,.72)),
+    url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1600');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .small {
+  letter-spacing: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(65px, 13vw, 115px);
+  font-weight: 400;
+  margin: 18px 0;
+  text-shadow: 0 5px 25px #0005;
+}
+
+.hero p {
+  max-width: 550px;
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+.btn {
+  border: 0;
+  border-radius: 40px;
+  padding: 14px 28px;
+  margin-top: 28px;
+  background: white;
+  color: var(--deep);
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 10px 25px #0003;
+}
+
+section {
+  padding: 85px 20px;
+}
+
+.container {
+  width: min(100%, 1000px);
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 58px;
+  color: var(--deep);
+  font-weight: 400;
+}
+
+.section-title p {
+  font-size: 13px;
+  opacity: .7;
+  margin-top: 8px;
+}
+
+.letter {
+  background: white;
+  padding: clamp(25px, 6vw, 55px);
+  border-radius: 22px;
+  box-shadow: 0 12px 45px #9d31501a;
+  line-height: 2;
+  font-size: 15px;
+  border: 1px solid #ffd5e1;
+}
+
+.letter p { margin-bottom: 18px; }
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  color: var(--pink);
+  margin-top: 20px;
+}
+
+.gallery {
+  background: #ffeaf0;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.photo {
+  overflow: hidden;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 25px #9d315018;
+}
+
+.photo img {
+  width: 100%;
+  height: 260px;
+  display: block;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.photo:hover img { transform: scale(1.07); }
+
+.photo p {
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+}
+
+.sorry-box {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 10px 35px #9d315018;
+}
+
+.sorry-box h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.sorry-box p {
+  line-height: 1.9;
+  min-height: 65px;
+}
+
+.sorry-box button {
+  background: var(--pink);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 22px;
+  margin: 12px 5px 0;
+  cursor: pointer;
+}
+
+.promises {
+  background: linear-gradient(135deg, #a51d50, #f36c94);
+  color: white;
+}
+
+.promises .section-title h2 { color: white; }
+
+.promise-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.promise {
+  padding: 24px;
+  border: 1px solid #ffffff55;
+  background: #ffffff15;
+  border-radius: 18px;
+  line-height: 1.8;
+  transition: .3s;
+}
+
+.promise:hover {
+  background: #ffffff25;
+  transform: translateY(-5px);
+}
+
+.promise span {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.timeline {
+  border-left: 2px solid var(--pink);
+  margin: 20px auto;
+  max-width: 650px;
+  padding-left: 25px;
+}
+
+.event {
+  position: relative;
+  padding: 0 0 30px;
+  line-height: 1.8;
+}
+
+.event::before {
+  content: '❤';
+  position: absolute;
+  left: -37px;
+  top: 0;
+  color: var(--pink);
+}
+
+.event h3 { color: var(--deep); }
+
+.final {
+  text-align: center;
+  background: #ffeaf0;
+}
+
+.final h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 65px;
+  color: var(--deep);
+  font-weight: 400;
+}
+
+.final p {
+  line-height: 1.9;
+  max-width: 600px;
+  margin: 15px auto;
+}
+
+footer {
+  background: #58132f;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 12px;
+}
+
+.music-button {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 10;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background: var(--deep);
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px #0003;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  z-index: 20;
+  animation: floatUp 6s linear forwards;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media(max-width:600px) {
+  section { padding: 65px 16px; }
+  .photos { grid-template-columns: 1fr; }
+  .photo img { height: 280px; }
+  .promise-list { grid-template-columns: 1fr; }
+  .letter { font-size: 14px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="small">A little world made only for you</div>
+  <h1>My Lamiya</h1>
+  <p>
+    Sometimes words are not enough to express what is in my heart.
+    But today, I want to try. This little website is made with love,
+    just for you.
+  </p>
+  <button class="btn" onclick="document.getElementById('letter').scrollIntoView()">
+    Open My Heart ❤️
+  </button>
+</header>
+
+<section id="letter">
+  <div class="container">
+    <div class="section-title">
+      <h2>My Dearest Lamiya</h2>
+      <p>A letter from the deepest corner of my heart</p>
+    </div>
+
+    <div class="letter">
+      <p>My love,</p>
+
+      <p>
+        I know that sometimes I make mistakes. Sometimes I fail to express
+        my feelings properly, and sometimes my actions may hurt the person
+        who means the world to me.
+      </p>
+
+      <p>
+        I am truly sorry for every moment I made you sad, every time I
+        disappointed you, and every word that hurt your heart.
+        I never want you to feel that you are not loved, valued, or important.
+      </p>
+
+      <p>
+        You are not just a part of my life. You are someone I want beside me
+        through every beautiful and difficult moment. I don't expect one
+        letter to fix everything. I want my actions to show you how much
+        I mean these words.
+      </p>
+
+      <p>
+        I may not be perfect, but my love for you is real.
+        I want to understand you better, listen more carefully,
+        and become a better husband every day.
+      </p>
+
+      <p>
+        Please forgive me when your heart is ready.
+        I love you, Lamiya. More than these words can ever explain.
+      </p>
+
+      <div class="signature">Forever yours ❤️</div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Little Memories</h2>
+      <p>Every picture holds a piece of my heart</p>
+    </div>
+
+    <div class="photos">
+      <div class="photo">
+        <img src="images/photo1.jpg" alt="Our memory 1">
+        <p>A beautiful memory ❤️</p>
+      </div>
+
+      <div class="photo">
+        <img src="images/photo2.jpg" alt="Our memory 2">
+        <p>My favorite person 🌹</p>
+      </div>
+
+      <div class="photo">
+        <img src="images/photo3.jpg" alt="Our memory 3">
+        <p>Moments I treasure ✨</p>
+      </div>
+
+      <div class="photo">
+        <img src="images/photo4.jpg" alt="Our memory 4">
+        <p>Always you and me 💕</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Why I'm Sorry</h2>
+      <p>There are so many things I wish I could tell you</p>
+    </div>
+
+    <div class="sorry-box">
+      <h3 id="reasonTitle">I'm sorry, my love 🥺</h3>
+      <p id="reasonText">
+        Because your smile means more to me than you know.
+      </p>
+      <button onclick="previousReason()">← Previous</button>
+      <button onclick="nextReason()">Next →</button>
+    </div>
+  </div>
+</section>
+
+<section class="promises">
+  <div class="container">
+    <div class="section-title">
+      <h2>My Promises to You</h2>
+      <p>Not just words. Promises I want to live by.</p>
+    </div>
+
+    <div class="promise-list">
+      <div class="promise">
+        <span>❤️</span>
+        **More understanding**
+        <p>I promise to listen to your feelings and understand your heart.</p>
+      </div>
+
+      <div class="promise">
+        <span>🌹</span>
+        **More affection**
+        <p>I promise to never let you forget how special you are to me.</p>
+      </div>
+
+      <div class="promise">
+        <span>🤝</span>
+        **More patience**
+        <p>I promise to handle difficult moments with kindness and respect.</p>
+      </div>
+
+      <div class="promise">
+        <span>💍</span>
+        **A beautiful future**
+        <p>I promise to keep choosing you and building our future together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Story</h2>
+      <p>A journey I want to keep writing with you</p>
+    </div>
+
+    <div class="timeline">
+      <div class="event">
+        <h3>The Beginning ❤️</h3>
+        <p>The day our story began and everything became a little more beautiful.</p>
+      </div>
+
+      <div class="event">
+        <h3>Our Beautiful Memories 🌸</h3>
+        <p>All the laughter, little moments, and memories that I hold close to my heart.</p>
+      </div>
+
+      <div class="event">
+        <h3>Today 💌</h3>
+        <p>A new opportunity to understand each other and love each other even better.</p>
+      </div>
+
+      <div class="event">
+        <h3>Our Tomorrow 💍</h3>
+        <p>A future full of love, respect, happiness, and togetherness.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="container">
+    <h2>One Last Thing...</h2>
+    <p>
+      If I could choose one person to walk through every chapter of my life
+      with, I would choose you again and again.
+    </p>
+    <h2>It's Always You, Lamiya. ❤️</h2>
+    <p>With all my love, today and always.</p>
+    <button class="btn" onclick="showLove()">A Little Surprise 💕</button>
+  </div>
+</section>
+
+<footer>
+  Made with endless love, just for Lamiya ❤️
+</footer>
+
+<button class="music-button" onclick="toggleMusic()" id="musicBtn">♫</button>
+
+<audio id="music" loop>
+  <source src="music/our-song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const reasons = [
+  {
+    title: "I'm sorry for hurting you 🥺",
+    text: "Your feelings matter to me. I never want to be the reason behind your tears."
+  },
+  {
+    title: "I'm sorry for not listening ❤️",
+    text: "I promise to listen more carefully and understand what your heart is trying to say."
+  },
+  {
+    title: "I'm sorry for my mistakes 🌹",
+    text: "I cannot change the past, but I can learn from it and make better choices."
+  },
+  {
+    title: "I'm sorry for the difficult moments 💌",
+    text: "You deserve patience, kindness, respect, and a love that makes you feel safe."
+  },
+  {
+    title: "Because I love you 💍",
+    text: "I want to keep growing with you, learning with you, and choosing you every day."
+  }
+];
+
+let reasonIndex = 0;
+
+function displayReason() {
+  document.getElementById("reasonTitle").textContent =
+    reasons[reasonIndex].title;
+
+  document.getElementById("reasonText").textContent =
+    reasons[reasonIndex].text;
+}
+
+function nextReason() {
+  reasonIndex = (reasonIndex + 1) % reasons.length;
+  displayReason();
+}
+
+function previousReason() {
+  reasonIndex = (reasonIndex - 1 + reasons.length) % reasons.length;
+  displayReason();
+}
+
+const music = document.getElementById("music");
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play().then(() => {
+      document.getElementById("musicBtn").textContent = "❚❚";
+    }).catch(() => {
+      alert("Please add your music file inside the music folder.");
+    });
+  } else {
+    music.pause();
+    document.getElementById("musicBtn").textContent = "♫";
+  }
+}
+
+function showLove() {
+  alert("I LOVE YOU, LAMIYA! ❤️\n\nYou are my favorite person, my happiness, and my forever love.");
+  for (let i = 0; i < 25; i++) createHeart();
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent = ["❤️", "💕", "💗", "🌹"][Math.floor(Math.random() * 4)];
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (16 + Math.random() * 20) + "px";
+  heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 8000);
+}
+
+setInterval(createHeart, 1300);
+displayReason();
+</script>
+
+</body>
+</html>
